@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BoardGames</string>
+
+    <string-array name="board_games">
+        <item>Alias</item>
+        <item>Hive</item>
+        <item>Spark</item>
+        <item>Codenames</item>
+        <item>Railroad</item>
+        <item>Werewolf</item>
+        <item>Similo</item>
+        <item>Selfish</item>
+        <item>Azul</item>
+        <item>Skull</item>
+        <item>Astra</item>
+        <item>Rummy</item>
+        <item>Catan</item>
+        <item>Dixit</item>
+        <item>Pandemic</item>
+        <item>Rizik</item>
+    </string-array>
+
+</resources>
