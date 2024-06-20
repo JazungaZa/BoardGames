@@ -2,6 +2,7 @@ package com.example.boardgames
 
 import android.os.Bundle
 import android.widget.GridView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         val adapter = GamesAdapter(this, nameList, imageList)
         gridView.adapter = adapter
 
+        gridView.setOnItemClickListener { adapterView, view, position, id ->
+
+            Toast.makeText(applicationContext, "We are playing: ${nameList.get(position)}", Toast.LENGTH_SHORT).show()
+
+        }
 
 
     }
