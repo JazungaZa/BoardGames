@@ -1,5 +1,6 @@
 package com.example.boardgames
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.GridView
 import android.widget.Toast
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainLinearVertical)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -35,7 +36,9 @@ class MainActivity : AppCompatActivity() {
 
         gridView.setOnItemClickListener { adapterView, view, position, id ->
 
-            Toast.makeText(applicationContext, "We are playing: ${nameList.get(position)}", Toast.LENGTH_SHORT).show()
+            var  intent = Intent(this@MainActivity, Game::class.java)
+            startActivity(intent)
+            //Toast.makeText(applicationContext, "We are playing: ${nameList.get(position)}", Toast.LENGTH_SHORT).show()
 
         }
 
