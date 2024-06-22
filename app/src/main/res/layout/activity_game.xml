@@ -31,6 +31,6 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:paddingTop="30dp"
-        android:text="TextView"
+        android:text="Opis"
         android:textSize="24sp" />
 </LinearLayout>

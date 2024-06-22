@@ -36,8 +36,19 @@ class MainActivity : AppCompatActivity() {
 
         gridView.setOnItemClickListener { adapterView, view, position, id ->
 
+            var gameName : String = nameList.get(position)
+            var gameImage : Int = imageList.get(position)
+
             var  intent = Intent(this@MainActivity, Game::class.java)
+
+           intent.putExtra("gameName", gameName)
+            intent.putExtra("gameImage",gameImage)
+
             startActivity(intent)
+
+
+
+
             //Toast.makeText(applicationContext, "We are playing: ${nameList.get(position)}", Toast.LENGTH_SHORT).show()
 
         }
